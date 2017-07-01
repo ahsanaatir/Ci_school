@@ -90,4 +90,14 @@ class Students extends CI_Controller{
         $this->load->view('student/search', $data);
         $this->load->view('templates/footer');
     }
+     public function asfand(){
+        $data['title'] = 'Student';
+        $data['session'] = $this->school_model->get_all_sessions();
+        $data['class'] = $this->school_model->get_all_class();
+        $data['section'] = $this->school_model->get_all_section();
+        $data['students'] = $this->student_model->get_all();
+        $this->load->view('templates/header',$data);
+        $this->load->view('student/search', $data);
+        $this->load->view('templates/footer');
+    }
 }
