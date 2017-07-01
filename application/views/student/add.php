@@ -1,7 +1,8 @@
 <div class="prices-head">
     <h2>Student Registration Form</h2>
 </div>
-<?php echo form_open('students/add_student'); ?>
+<?php echo validation_errors(); ?>
+<?php echo form_open_multipart('students/add_student'); ?>
 <!--mainpage chit-chating-->
 <div class="chit-chat-layer1">
     <div class="col-md-3 chit-chat-layer1-left">
@@ -62,10 +63,10 @@
             Admission Detail
         </div>
         <div class="form-group">
-            <input type="text" name="roll_no" class="form-control" required placeholder="Enter Student Roll no" tabindex="4">
+            <input type="text" name="roll_no" class="form-control" required placeholder="Roll no" tabindex="4">
         </div>
         <div class="form-group">
-            <input type="text" name="registration_no" class="form-control" required placeholder="Enter Student Registration No" tabindex="5">
+            <input type="text" name="registration_no" class="form-control" required placeholder="Registration No" tabindex="5">
         </div>
         <div class="form-group">
             <input type="date" name="doa" class="form-control" required placeholder="Date of Admission" tabindex="6">
