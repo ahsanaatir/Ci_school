@@ -97,4 +97,35 @@ class Students extends CI_Controller{
         $this->load->view('student/search', $data);
         $this->load->view('templates/footer');
     }
+    public function get_classDetails_by_session_id()
+    {
+        $id = $this->input->post("session_id");
+        $data = $this->school_model->get_classDetails_by_session_id($id);
+        $option ="<option value='0'>Class</option>";
+        foreach($data as $d)
+        {
+             $option .= "<option value='".$d['id']."'>".$d['name']."</option>";
+        }
+        echo $option;
+    }
+    public function get_sectionDetails_by_class_id()
+    {
+        $id = $this->input->post("class_id");
+        $data = $this->school_model->get_sectionDetails_by_class_id($id);
+        $option ="<option value='0'>Section</option>";
+        foreach($data as $d)
+        {
+            $option .= "<option value='".$d['id']."'>".$d['name']."</option>";
+        }
+        echo $option;
+    }
+    public function get_class_detail()
+    {
+        $id = $this->input->post("class_id");
+        $data = $this->school_model->get_class_detail($id);
+        //print_r($data);
+        //echo $data[0]['admission_fee'].",".$data[0]['tuition_fee'];
+        echo json_encode($data);
+    }
+
 }

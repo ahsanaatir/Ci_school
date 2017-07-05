@@ -10,9 +10,12 @@ class Student_model extends CI_Model
 
     public function get_all()
     {
-        $this->db->order_by('id', 'DESC');
-        $query = $this->db->get('students');
-        return $query->result_array();
+
+        $this->db->select('*');
+        $this->db->from('student_personal_info');
+        $this->db->join('student_admission_info', 'student_admission_info.student_id = student_personal_info.id');
+        $this->db->join('student_family_info', 'student_family_info.student_id = student_personal_info.id');
+        return $this->db->get()->result();
     }
 
 //    public function save_student_personal_info()
@@ -37,7 +40,7 @@ class Student_model extends CI_Model
 
     public function save()
     {
-        var_dump($_POST);
+        //var_dump($_POST);
         $personal_info_data = array(
             'full_name' => $this->input->post('student_name'),
             'bay_form' => $this->input->post('b_form'),
