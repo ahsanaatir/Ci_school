@@ -8,13 +8,13 @@
 <br><br><br><br>
 
 
-<?php echo form_open('students/attendance')?>
 <div class="chit-chat-layer1 row">
 
   	<div class="col-md-12">
                  <div class="work-progres">
                               <div class="chit-chat-heading">
                                   <div class="row">
+                                  <?php echo form_open('students/load_attendance');?>
                                   <div class="col-md-3">
                                       <div class="form-group" >
                                         <!-- <label>Session:</label> -->
@@ -73,25 +73,36 @@
 
                                           </div>
                                       </div>
+                                      </form>
                               </div>
 
-                                  </form>
+                                  
                               </div>
 
                  <div class="table-responsive">
+
+
+
+
+
+
                      <table class="table">
+
                          <tr >
                              <th class="header"><input type="checkbox"> <i class="icon-sort"></i></th>
                              <th class="header"> Student Name<i class="icon-sort"></i></th>
 
                              <th class="header"> Status <i class="icon-sort"></i></th>
 
+                             <th class="header"> Mark Attendence <i class="icon-sort"></i></th>
+
                          </tr>
                          <tbody>
+                                              <?php foreach ($students as $student){?>
 
                              <tr>
                                  <td><input type="checkbox"> </td>
-                                 <td> student_name  <br> father_name </td>
+                                 <td> <?php echo $student->full_name?>  <br> <!-- father_name --> </td>
 
                                  <td>
                                      <select name="status" id="status" class="form-control" >
@@ -104,11 +115,22 @@
 
                                  </td>
 
+
+                                 <td>
+                                     <input type="" name="submit"  class="form-control btn btn-success" value="mark" >
+
+                                     
+
+                                 </td>
+
+
+
+
                                  <td>
 
                                  </td>
                              </tr>
-
+<?php }?>
                          </tbody>
 
                      </table>

@@ -74,24 +74,22 @@
                          <tbody>
                          <?php
                          foreach ($students as $std)
-                         {
-                             //print_r($std);
-                             ?>
+                         {?>
                              <tr>
                                  <td><input type="checkbox"> </td>
-                                 <td> <?php echo $std->full_name;?>  <br> <?php echo $std->father_name;?>  </td>
-                                 <td> <?php echo $std->roll_no;?>  <br> <?php echo $std->registration_no;?>  </td>
-                                 <td> <?php echo $std->date_of_birth;?>  </td>
-                                 <td> <?php echo $std->gender;?>  </td>
-                                 <td> <?php echo $std->bay_form;?> <br> <?php echo $std->father_cnic;?> </td>
+                                 <td> <?php echo $std['name'];?>  <br> <?php echo $std['father_name'];?>  </td>
+                                 <td> <?php echo $std['roll_no'];?>  <br> <?php echo $std['registration_no'];?>  </td>
+                                 <td> <?php echo $std['date_of_birth'];?>  </td>
+                                 <td> <?php echo $std['gender'];?>  </td>
+                                 <td> <?php echo $std['b_form'];?> <br> <?php echo $std['father_cnic'];?> </td>
 
-                                 <td> <?php echo $std->contact_no;?> <br> <?php echo $std->address;?> </td>
+                                 <td> <?php echo $std['contact_no'];?> <br> <?php echo $std['address'];?> </td>
                                  <td>
                                      <div class="dropdown">
                                          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Option
                                              <span class="caret"></span></button>
                                          <ul class="dropdown-menu dropdown-menu-right">
-                                             <li><a href="">Fee slip</a></li>
+                                             <li><a href="{% url 'student:fee_slip_form' %}">Fee slip</a></li>
                                              <li><a href="#">Promote</a></li>
                                              <li><a href="#">Admission Form</a></li>
                                          </ul>

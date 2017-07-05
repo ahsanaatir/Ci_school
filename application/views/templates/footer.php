@@ -20,32 +20,11 @@
 		        <li id="menu-home" ><a href="<?php echo base_url();?>home"><i class="fa fa-tachometer"></i><span>Home</span></a></li>
 		        <li><a href="<?php echo base_url();?>students"><i class="fa fa-user"></i><span>Student</span><span class="fa fa-angle-right" style="float: right"></span></a>
 		          <ul>
-		            <li><a href="<?php echo base_url();?>students/add">Add Student</a></li>
-		            <li><a href="<?php echo base_url();?>students/search">View Students</a></li>
-					  <li><a href="<?php echo base_url();?>students/attendance">Mark Attendance</a></li>
+		            <li><a href="<?php echo base_url();?>students/add">Add</a></li>
+		            <li><a href="<?php echo base_url();?>students/search">Search</a></li>
+					  <li><a href="<?php echo base_url();?>students/attendance">Attendance</a></li>
 		          </ul>
 		         </li>
-				  <li><a href="<?php echo base_url();?>teacher"><i class="fa fa-black-tie"></i><span>Teacher</span><span class="fa fa-angle-right" style="float: right"></span></a>
-					  <ul>
-						  <li><a href="<?php echo base_url();?>teachers/add">Add Teacher</a></li>
-						  <li><a href="<?php echo base_url();?>teachers/search">View Teachers</a></li>
-						  <li><a href="<?php echo base_url();?>teachers/attendance">Mark Attendance</a></li>
-					  </ul>
-				  </li>
-				  <li><a href="<?php echo base_url();?>teacher"><i class="fa fa-steam"></i><span>Reports</span><span class="fa fa-angle-right" style="float: right"></span></a>
-					  <ul>
-						  <li><a href="<?php echo base_url();?>teachers/add">Add Teacher</a></li>
-						  <li><a href="<?php echo base_url();?>teachers/search">View Teachers</a></li>
-						  <li><a href="<?php echo base_url();?>teachers/attendance">Mark Attendance</a></li>
-					  </ul>
-				  </li>
-				  <li><a href="<?php echo base_url();?>teacher"><i class="fa fa-linux"></i><span>Exam</span><span class="fa fa-angle-right" style="float: right"></span></a>
-					  <ul>
-						  <li><a href="<?php echo base_url();?>teachers/add">Add Teacher</a></li>
-						  <li><a href="<?php echo base_url();?>teachers/search">View Teachers</a></li>
-						  <li><a href="<?php echo base_url();?>teachers/attendance">Mark Attendance</a></li>
-					  </ul>
-				  </li>
 <!--		        <li id="menu-comunicacao" ><a href="#"><i class="fa fa-book nav_icon"></i><span>Element</span><span class="fa fa-angle-right" style="float: right"></span></a>-->
 <!--		          <ul id="menu-comunicacao-sub" >-->
 <!--		            <li id="menu-mensagens" style="width: 120px" ><a href="buttons.html">Buttons</a>-->
