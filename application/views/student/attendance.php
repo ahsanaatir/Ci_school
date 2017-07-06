@@ -1,4 +1,8 @@
 
+
+
+
+
 <div class="col-md-10">
     <h1>Student Attendance List</h1>
 </div>
@@ -8,13 +12,15 @@
 <br><br><br><br>
 
 
-<?php echo form_open('students/attendance')?>
+
 <div class="chit-chat-layer1 row">
 
   	<div class="col-md-12">
                  <div class="work-progres">
                               <div class="chit-chat-heading">
+
                                   <div class="row">
+                                  <?php echo form_open('students/load_attendance')?>
                                   <div class="col-md-3">
                                       <div class="form-group" >
                                         <!-- <label>Session:</label> -->
@@ -73,6 +79,7 @@
 
                                           </div>
                                       </div>
+                                     </form>
                               </div>
 
                                   </form>
@@ -85,17 +92,23 @@
                              <th class="header"> Student Name<i class="icon-sort"></i></th>
 
                              <th class="header"> Status <i class="icon-sort"></i></th>
+                             <th class="header"> Mark Attendance <i class="icon-sort"></i></th>
 
                          </tr>
                          <tbody>
+                            <?php if ($students)
+                            { foreach ($students as $student ) {
+                              # code...
+                             
+                             ?>
+                               <?php echo form_open('students/mark_attendance')?>
+                                <tr>
+                                 <td><input type="checkbox" > </td>
+                                 <td> <?php echo $student->full_name;?>  <br><?php echo $student->father_name;?>                       <input type="text" name="student_id" value="<?php echo $student->id ?>" hidden></td>
 
-                             <tr>
-                                 <td><input type="checkbox"> </td>
-                                 <td> student_name  <br> father_name </td>
 
                                  <td>
                                      <select name="status" id="status" class="form-control" >
-                                         <option value="" >Status</option>
 
                                          <option value="0" selected>Absent</option>
                                          <option value="1" >Present</option>
@@ -106,10 +119,13 @@
 
                                  <td>
 
+                                    <input type="submit" name="" class="btn btn-success" value="Mark">
                                  </td>
                              </tr>
-
+                            </form>
+               <?php }}?>
                          </tbody>
+
 
                      </table>
 </div>
