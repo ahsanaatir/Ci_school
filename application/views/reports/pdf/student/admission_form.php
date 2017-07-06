@@ -1,4 +1,5 @@
 <?php
+
 tcpdf();
 $obj_pdf = new TCPDF('P', PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 $obj_pdf->SetCreator(PDF_CREATOR);
@@ -16,14 +17,16 @@ $obj_pdf->SetFont('helvetica', '', 9);
 $obj_pdf->setFontSubsetting(false);
 $obj_pdf->AddPage();
 ob_start();
+
+
+$html = '<style>'.file_get_contents(base_url().'css/admission_form.css').'</style>';
+$html .= '<style>'.file_get_contents(base_url().'css/bootstrap.css').'</style>';
+$html .= file_get_contents(base_url().'css/abc.html');
+
+echo $html;
 ?>
 
 
-
-
-<?php
-var_dump($student);
-?>
 
 
 

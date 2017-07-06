@@ -1,4 +1,15 @@
 
+
+<script >
+  
+  $(document).ready(function() { 
+    // call the tablesorter plugin 
+    $("table").tablesorter(); 
+}); 
+</script>
+
+
+
 <div class="col-md-10">
     <h1>Student Detail List</h1>
 </div>
@@ -59,19 +70,25 @@
                                   </div>
                               </div>
 
-                 <div class="table-responsive">
-                     <table class="table">
+ 
+
+                 </div>
+    </div>
+</div>
+                    <table class= "table table-responsive" id="tab" >
+                     <thead>
                          <tr>
                              <th class="header"><input type="checkbox"> <i class="icon-sort"></i></th>
-                             <th class="header"> Student Name<hr style="margin: 0">Father Name <i class="icon-sort"></i></th>
-                             <th class="header"> Roll No<hr style="margin: 0">Registration No <i class="icon-sort"></i></th>
-                             <th class="header"> Date of Birth<i class="icon-sort"></i></th>
-                             <th class="header"> Gender <i class="icon-sort"></i></th>
-                             <th class="header"> B-form<hr style="margin: 0">Father CNIC <i class="icon-sort"></i></th>
-                             <th class="header"> Contact No<hr style="margin: 0">Address <i class="icon-sort"></i></th>
-                             <th class="header"> Action <i class="icon-sort"></i></th>
+                             <th class="header" style="cursor:pointer";> Student Name<hr style="margin: 0">Father Name <i class="icon-sort"></i></th>
+                             <th class="header" style="cursor:pointer";> Roll No<hr style="margin: 0">Registration No <i class="icon-sort"></i></th>
+                             <th class="header" style="cursor:pointer";> Date of Birth<i class="icon-sort"></i></th>
+                             <th class="header" style="cursor:pointer";> Gender <i class="icon-sort"></i></th>
+                             <th class="header" style="cursor:pointer";> B-form<hr style="margin: 0">Father CNIC <i class="icon-sort"></i></th>
+                             <th class="header" style="cursor:pointer";> Contact No<hr style="margin: 0">Address <i class="icon-sort"></i></th>
+                             <th class="header" style="cursor:pointer";> Action <i class="icon-sort"></i></th>
                          </tr>
-                         <tbody>
+                        </thead>
+                        <tbody class="table-hover">
                          <?php
                          foreach ($students as $std)
                          {
@@ -104,10 +121,6 @@
                          ?>
 
 
-                         </tbody>
-
+</tbody>
                      </table>
-</div>
-                 </div>
-    </div>
-</div>
+
