@@ -74,18 +74,56 @@ class Students extends CI_Controller{
 
     }
 
-
+    /*Start Attendance By Asfand */
     public function attendance(){
-        $data_header['title'] = 'Create New Student ';
+        $data_header['title'] = 'Attendance ';
         //get all Session
         $data['session'] = $this->school_model->get_all_sessions();
         $data['class'] = $this->school_model->get_all_class();
         $data['section'] = $this->school_model->get_all_section();
-
+        $data['students'] =FALSE;
         $this->load->view('templates/header',$data_header);
         $this->load->view('student/attendance', $data);
         $this->load->view('templates/footer');
     }
+
+    public function load_attendance()
+    {
+    $data_header['title'] = 'Attendance ';
+    $data['session'] = $this->school_model->get_all_sessions();
+    $data['class'] = $this->school_model->get_all_class();
+    $data['section'] = $this->school_model->get_all_section();
+    $data['students'] = $this->student_model->load_attendance();
+    $this->load->view('templates/header',$data_header);
+    $this->load->view('student/attendance', $data);
+    $this->load->view('templates/footer');
+    }
+
+    public function mark_attendance()
+    {
+        $this->student_model->mark_attendance();
+       // redirect ('students/attendance');
+    }
+    /*End Attendance By Asfand */
+
+
+    /*Start Generate Pdf (Admission Form) By Asfand */  
+    public function generate_admission_form()
+    {     
+          $data_header['title'] = 'Admission Form ';
+
+          $student_id=$this->uri->segment(3);
+          $data['student']=$this->student_model->get_student($student_id)[0];
+          $this->load->view('reports/pdf/student/admission_form',$data);
+    }
+
+
+
+
+
+
+
+    /*End Generate Pdf (Admission Form) By Asfand */  
 
     public function search(){
         $data['title'] = 'Student';

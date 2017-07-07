@@ -12,14 +12,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="<?php echo base_url();?>css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <!-- Custom Theme files -->
 <link href="<?php echo base_url();?>css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="<?php echo base_url();?>css/table.css" rel="stylesheet" type="text/css" media="all"/>
 <!--js-->
 <script src="<?php echo base_url();?>js/jquery-2.1.1.min.js"></script>
+
+<script src="<?php echo base_url();?>js/jquery.tablesorter.js"></script>
 <!--icons-css-->
 <link href="<?php echo base_url();?>css/font-awesome.css" rel="stylesheet">
 <!--Google Fonts--
 <link href='//fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
 <!--//skycons-icons-->
+
 </head>
 <body>
 <div class="page-container">

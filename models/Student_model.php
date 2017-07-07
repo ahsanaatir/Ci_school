@@ -18,26 +18,53 @@ class Student_model extends CI_Model
         return $this->db->get()->result();
     }
 
-//    public function save_student_personal_info()
-//    {
-//
-//    }
-//
-//    public function save_student_family_info()
-//    {
-//
-//    }
-//
-//    public function save_student_admission_info()
-//    {
-//
-//    }
-//
-//    public function save_student_fee_info()
-//    {
-//
-//    }
 
+
+
+/*Start  Attendance By Asfand */
+
+
+    public function load_attendance()
+    {
+        $session_id=$this->input->post("session_id");
+        $class_id=$this->input->post("class_id");
+        $section_id=$this->input->post("section_id");
+
+
+
+         $this->db->select('*');
+        $this->db->from('student_personal_info');
+        $this->db->join('student_admission_info', 'student_admission_info.student_id = student_personal_info.id');
+        $this->db->join('student_family_info', 'student_family_info.student_id = student_personal_info.id');
+        $this->db->where(array('student_admission_info.session_id' => $session_id,'student_admission_info.class_id' => $class_id,'student_admission_info.section_id' => $section_id));
+        return $this->db->get()->result();
+
+    }
+
+   public function mark_attendance()
+    {
+        $student_id=$this->input->post("student_id");
+        $status=$this->input->post("status");
+        print_r($status);
+
+
+    }
+    public function get_student($student_id)
+    {
+
+        $this->db->select('*');
+        $this->db->from('student_personal_info');
+        $this->db->join('student_admission_info', 'student_admission_info.student_id = student_personal_info.id');
+        $this->db->join('student_family_info', 'student_family_info.student_id = student_personal_info.id');
+        $this->db->where(array('student_personal_info.id' => $student_id ));
+        return $this->db->get()->result();
+    }
+
+
+
+
+
+/*End Attendance By Asfand */
     public function save()
     {
         //var_dump($_POST);

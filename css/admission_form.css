@@ -1,0 +1,138 @@
+.rqdbx
+{	
+	font-size: 20px;
+	padding-top: 0px;
+	border: 2px solid black;
+	padding-bottom: 10px;
+	border-radius: 10px;
+
+
+}
+.l-rqdbx
+{
+	
+	background-color:black;
+	color:white;
+	margin-top:0px;
+}
+.schlreg
+{
+
+border: 3px dashed black;
+
+}
+.pic
+{    
+	width: 150px;
+	padding: 20px;
+	 border: 2px solid black;
+	 height: 170px;
+}
+
+.stdinf
+{		
+		margin-top: 1%;
+		padding: 2%;
+		 border: 2px solid black;
+
+
+}
+.stdinf-tag
+{
+	float: left;
+margin-top:5%;
+position: fixed;
+margin-left:0px; 
+
+color:white;
+ font-size: 40px;
+}
+
+
+.vericaltext{
+
+-webkit-transform: rotate(-90deg);   
+-moz-transform: rotate(-90deg);
+-ms-transform: rotate(-90deg);
+-o-transform: rotate(-90deg);
+transform: rotate(-90deg);
+background-color: black;
+width: 150px;
+
+}
+.box
+{
+margin-top: 0.5%;
+border: 1px solid black;
+font-size: 12PX;
+padding:2px; 
+
+}
+.line
+{	
+    margin-top: 0.5%;  
+	border-bottom: 2px solid black;
+	
+
+}
+.noline
+{ 
+	margin-top: 0px;  
+	border-bottom: 0px;
+
+}
+label
+{   
+	font-style: italic;
+	margin-top: 1px;
+	font-size: 12PX;
+}
+
+.black
+{
+	background-color: black;
+	color: white;
+}
+.small
+{
+	font-size: 12PX;
+
+}
+.large
+{
+	font-size: 25px;
+}
+.cent
+{
+	text-align: center;
+	padding:1.62%;
+}
+.dash
+{   
+	padding: 1%;
+	border:3px dashed black;
+}
+.box2
+{   
+	padding: 1%;
+	border:2px solid black;
+}
+.smallmarg
+{
+	margin-top: .5%;
+}
+.medium
+{
+	font-size: 19px;
+}
+
+.nopad
+{
+	margin-left: 12PX;
+}
+.adwd
+{
+	font-style: italic;
+	
+	font-size: 12PX;
+}
